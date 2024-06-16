@@ -1,0 +1,26 @@
+from tkinter import *
+
+import time
+
+def timing():
+    ct=time.strftime("%H:%M:%S:%p")
+    label.config(text=ct)
+    label.after(1000,timing)
+
+screen=Tk()
+screen.title("Clock")
+screen["bg"]="pink"
+
+label=Label(screen,bg="blue",fg="white",font="arial 30 bold")
+
+
+                            #   pack= for showing data in middle(in box)
+label.pack()
+timing()
+
+mainloop()
+
+
+
+
+
